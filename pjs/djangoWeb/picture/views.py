@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def picture_home(request):
+    # Picture 홈 뷰의 내용
+    return render(request, 'picture/picture_home.html')

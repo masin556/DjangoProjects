@@ -1,0 +1,21 @@
+{% block content %}
+  {% if question_list %}
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'chat_history' %}">Chat</a></li>
+        <li><a href="{% url 'game_home' %}">Game</a></li>
+        <li><a href="{% url 'picture_home' %}">Picture</a></li>
+        <!-- 기존의 Pybo 메뉴 항목들을 여기에 유지 -->
+      </ul>
+    </nav>
+
+    <ul>
+      {% for question in question_list %}
+        <li><a href="/pybo/{{ question.id }}/">{{ question.subject }}</a></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>질문이 없습니다.</p>
+  {% endif %}
+{% endblock %}

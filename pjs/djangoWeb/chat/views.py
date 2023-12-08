@@ -1,3 +1,12 @@
 from django.shortcuts import render
+from django.views.generic import ListView
+from .models import ChatMessage
 
-# Create your views here.
+def home(request):
+    return render(request, 'home.html')
+
+class ChatHistoryView(ListView):
+    model = ChatMessage
+    template_name = 'chat/chat_history.html'
+    context_object_name = 'chat_messages'
+    ordering = ['-timestamp']

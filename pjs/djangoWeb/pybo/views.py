@@ -1,9 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import Question
 
-# URL mapping
-from django.http import HttpResponse 
-# Create your views here.
 
-# 
+#pybo\question_list.html
 def index(request):
-    return HttpResponse("안녕하세요 pybo에 오신것을 환영합니다.")
+    # ('-create_date') 역순으로 정렬 | order_by는 조회 결과를 정렬하는 함수
+    question_list = Question.objects.order_by('-create_date') 
+    context = {'question_list': question_list}
+    # 파이썬 데이터를 템플릿에 적용하여 HTML로 반환하는 함수
+    return render(request, 'pybo/question_list.html', context)
+
+
+#pybo\question_detail.html
+def detail(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    context = {'question': question}
+    return render(request, 'pybo/question_detail.html', context)
+
+

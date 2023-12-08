@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Welcome to the Pictures Page</h1>
+  {% for picture in pictures %}
+    <img src="{{ picture.image.url }}" alt="{{ picture.hashtag }}">
+    <p>{{ picture.hashtag }}</p>
+  {% endfor %}
+{% endblock %}
