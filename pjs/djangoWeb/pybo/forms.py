@@ -1,6 +1,6 @@
 # 요청시 전달되는 파라미터들을 쉽게 관리하기 위해 사용하는 클래스
 from django import forms
-from pybo.models import Question, Answer
+from pybo.models import Question, Answer 
 
 
 class QuestionForm(forms.ModelForm):
@@ -25,3 +25,4 @@ class AnswerForm(forms.ModelForm):
         labels = {
             'content': '답변내용',
         }
+        

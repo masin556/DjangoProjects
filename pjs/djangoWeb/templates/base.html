@@ -13,8 +13,13 @@
 </head>
 
 <body>
+  <!-- 배너 추가 -->
+<div id="banner">
+  <img src="{% static 'image/GIBEON.png' %}" alt="Banner image">
+</div>
 <!-- 네비게이션바 -->
 {% include "navbar.html" %}
+
 <!--카테고리-->
 <!-- Bootstrap CSS 파일 로드 -->
 <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
@@ -33,7 +38,7 @@
       <ul class="navbar-nav">
         <!-- Chat 버튼 -->
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'pybo:chat_history' %}">Chat</a>
+          <a class="nav-link" hksref="{% url 'pybo:chat_history' %}">Chat</a>
         </li>
         <!-- Game 버튼 -->
         <li class="nav-item">

@@ -1,48 +1,11 @@
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-#from django.http import HttpResponseNotAllowed
-from django.core.paginator import Paginator  
-from django.contrib.auth.decorators import login_required
-from django.contrib import messages
-from .models import Question
-from .forms import QuestionForm, AnswerForm
 
-#pybo\question_list.html
-def index(request):
-    page = request.GET.get('page', '1')  # 페이지
-    # ('-create_date') 역순으로 정렬 | order_by는 조회 결과를 정렬하는 함수
-    question_list = Question.objects.order_by('-create_date') 
-    paginator = Paginator(question_list, 10)  # 페이지당 10개씩 보여주기
-    page_obj = paginator.get_page(page)
-    context = {'question_list': page_obj}
-    # 파이썬 데이터를 템플릿에 적용하여 HTML로 반환하는 함수
-    return render(request, 'pybo/question_list.html', context)
+from ..forms import QuestionForm
+from ..models import Question
 
-
-#pybo\question_detail.html
-def detail(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    context = {'question': question}
-    return render(request, 'pybo/question_detail.html', context)
-
-@login_required(login_url='common:login')
-#question_id는 URL 매핑에 의해 그 값이 전달
-def answer_create(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    #answer = Answer(question=question, content=request.POST.get('content'), create_date=timezone.now())
-    if request.method == "POST":
-        form = AnswerForm(request.POST)
-        if form.is_valid():
-            answer = form.save(commit=False)
-            answer.author = request.user  # author 속성에 로그인 계정 저장
-            answer.create_date = timezone.now()
-            answer.question = question
-            answer.save()
-            return redirect('pybo:detail', question_id=question.id)
-    else:
-        form = AnswerForm()
-    context = {'question': question, 'form': form}
-    return render(request, 'pybo/question_detail.html', context)
 
 
 @login_required(login_url='common:login')
@@ -116,12 +79,12 @@ def question_delete(request, question_id):
 
 
 
-# home 링크
-def redirect_to_external_link(request):
-    external_link = "https://gibeonsoftworks.notion.site/GIBEON-GAME-STUDIO-Customer-c412c9b24b7d4f2183396cdd3572e054?pvs=4"
-    return redirect(external_link)
-
-# Gmae 링크
-def game_home(request):
-    # game_home 뷰 함수의 내용 추가
-    return render(request, 'pybo/game_home.html')  # 예시로 'pybo/game_home.html'을 렌더링하도록 함
+# 질문 추천 버튼
+@login_required(login_url='common:login')
+def question_vote(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    if request.user == question.author:
+        messages.error(request, '본인이 작성한 글은 추천할수 없습니다')
+    else:
+        question.voter.add(request.user)
+    return redirect('pybo:detail', question_id=question.id)
