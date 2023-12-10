@@ -1,6 +1,3 @@
-# DjangoProjects
-## 장고 프로젝트 시작 
-
 # Django 세미프로젝트
 
 <aside>
