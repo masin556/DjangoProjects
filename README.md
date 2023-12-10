@@ -2,7 +2,7 @@
 
 <aside>
 💡 이름 : 신충식
-과정명  : 컴투스 블록체인 Django 세미 프로젝트
+과정명  : Django 세미 프로젝트
 
 </aside>
 
@@ -45,64 +45,64 @@ Tools : Django, Html, CSS, Visual studio code, Python
 
 이 프로젝트 진행을 위해 [Virtual Box 7](https://www.virtualbox.org/) 최신버전을 사용한다.  
 
-![tempsnip.png](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/tempsnip.png)
+![tempsnip.png](Django/tempsnip.png)
 
 1. Rocky 9 버전을 사용해 구성하기
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled.png)
+    ![Untitled](Django/Untitled.png)
     
     window환경에서 구성한다. minimal로 선택을 해주었다.
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%201.png)
+    ![Untitled](Django/Untitled%201.png)
     
     머신 > 새로만들기
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%202.png)
+    ![Untitled](Django/Untitled%202.png)
     
     설치 받은 Rocky.iso 파일을 집어넣어 줍니다. 
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%203.png)
+    ![Untitled](Django/Untitled%203.png)
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%204.png)
+    ![Untitled](Django/Untitled%204.png)
     
     연습용 지정이기에 그냥 대충 지어냈다. 
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%205.png)
+    ![Untitled](/Untitled%205.png)
     
     메모리 할당은 4096MB CPU는 1개이기에 선택
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%206.png)
+    ![Untitled](Django/Untitled%206.png)
     
     기본 disk는 20GB를 할당 하였다. 
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%207.png)
+    ![Untitled](Django/Untitled%207.png)
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%208.png)
+    ![Untitled](Django/Untitled%208.png)
     
     가상 머신에 설치 되면서 virtualbox가 실행이 될 것이다.  
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%209.png)
+    ![Untitled](Django/Untitled%209.png)
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2010.png)
+    ![Untitled](Django/Untitled%2010.png)
     
     가상 머신이 자동 실행되고 Linux 커널 창이 뜨지 않을 것이다.  설정에서 저장소에 컨트롤러 IDE 과학드라이브 iso 파일을 잡아줘야 한다. 
     
 2. Linux Setting 
     - 처음 실행시 main커널 창에 선택을 안하면 이렇게 설치 되버린다.
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2011.png)
+    ![Untitled](Django/Untitled%2011.png)
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2012.png)
+    ![Untitled](Django/Untitled%2012.png)
     
     기본 환경은 영어로 셋팅
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2013.png)
+    ![Untitled](Django/Untitled%2013.png)
     
     하단에 root 패스워드 설정해 달라고도 한다. 광학디스크는 그냥 들어갔다가Done누르게 되면 자동으로 잡힌다. 
     
     RootPassword 셋팅을 해주면 User는 따로 안해줘도 된다.  이후 하단에 Begin을 눌러주면 된다. 
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2014.png)
+    ![Untitled](Django/Untitled%2014.png)
     
     인스톨 후 Reboot시켜준다. 
     
@@ -114,7 +114,7 @@ Tools : Django, Html, CSS, Visual studio code, Python
     yum install kernel-devel gcc -y
     ```
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2015.png)
+    ![Untitled](Django/Untitled%2015.png)
     
     모든 설치가 완료되면 
     
@@ -128,7 +128,7 @@ Tools : Django, Html, CSS, Visual studio code, Python
     
     정확히 따라가면 이런식으로 기본 GUI 화면이 표시되는 것을 볼 수 있다. (보통 실제 현업에서는 일반적인 muti-user 화면을 사용하지만. 테스트를 위해서 셋팅을 이렇게 해주었다.
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2016.png)
+    ![Untitled](Django/Untitled%2016.png)
     
 
 ## 2.2 파이썬 설치
@@ -199,7 +199,7 @@ Python 3.9.18
     wget https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz
     ```
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2017.png)
+    ![Untitled](Django/Untitled%2017.png)
     
 3. 압축을 해제하고 빌드 및 설치한다.
     
@@ -219,7 +219,7 @@ Python 3.9.18
     python3.12 --version
     ```
     
-    ![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2018.png)
+    ![Untitled](Django/Untitled%2018.png)
     
 
 ---
@@ -260,7 +260,7 @@ $ source activate
 $ pip install django==4.0.3
 ```
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2019.png)
+![Untitled](Django/Untitled%2019.png)
 
 ```bash
 WARNING: You are using pip version 21.2.3; however, version 23.3.1 is available.
@@ -337,7 +337,7 @@ Quit the server with CONTROL-C.
 
 이제 웹브라우저를 열고 주소창에 `http://127.0.0.1:8000/`을 입력해 보자.
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2020.png)
+![Untitled](Django/Untitled%2020.png)
 
 ### 2.3.1 환경변수 셋팅 및 진입점 만들기
 
@@ -375,7 +375,7 @@ or
 source ~/.bashrc
 ```
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2021.png)
+![Untitled](Django/Untitled%2021.png)
 
 activateDj 하게 되면 이런식으로 해당 경로로 activate되는 것을 볼 수 있다. 
 
@@ -383,7 +383,7 @@ activateDj 하게 되면 이런식으로 해당 경로로 activate되는 것을 
 
 ## 3.1 순서도
 
-![DjangoWeb.png](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/DjangoWeb.png)
+![DjangoWeb.png](Django/DjangoWeb.png)
 
 ### 전체 트리 구조
 
@@ -687,7 +687,7 @@ config  db.sqlite3  manage.py  pybo
 
 pybo디렉토리가 생긴다. 해당 페이지를 열어보자.
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2022.png)
+![Untitled](Django/Untitled%2022.png)
 
 404 오류는 브라우저가 요청한 페이지를 찾을 수 없을 경우에 발생한다
 
@@ -696,7 +696,7 @@ pybo디렉토리가 생긴다. 해당 페이지를 열어보자.
 1. django를 실행시킨 브라우저에서 로컬 서버로 [http://localhost:8000/pybo](http://localhost:8000/pybo) 페이지를 요청하면
 2. [urls.py](http://urls.py) 파일에서 /pybo URL 매핑을 확인해서 views.py파일의 index함수를 호출 하고 호출한 결과를 브라우저에 반영한다 
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2023.png)
+![Untitled](Django/Untitled%2023.png)
 
 ### 3.2.2 URL 분리하기
 
@@ -745,9 +745,9 @@ urlpatterns = [
 
 `pybo/` URL은 다음처럼 `config/urls.py` 파일에 매핑된 `pybo/` 와 `pybo/urls.py` 파일에 매핑된 `''` 이 더해져 `pybo/`가 된다
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2024.png)
+![Untitled](Django/Untitled%2024.png)
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2025.png)
+![Untitled](Django/Untitled%2025.png)
 
 `pybo/urls.py` 파일에 `path('question/create/', ...)` 라는 URL매핑이 추가된다면 최종 매핑되는 URL은 `pybo/`가 더해진 `pybo/question/create/`가 될 것이다.
 
@@ -817,15 +817,15 @@ Type "help", "copyright", "credits" or "license" for more information.
 (djangoWeb) C:\DjangoProjects\pjs\djangoWeb>python manage.py createsuperuser
 ```
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2026.png)
+![Untitled](Django/Untitled%2026.png)
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2027.png)
+![Untitled](Django/Untitled%2027.png)
 
 장고 관리자는 쉽게 말해 메인 페이지에 올라오는 데이터 들을 관리자 입장에서 볼 수 있는 것이다. 
 
 관리자로 로그인하면 회원가입이나 로그인 처리 질문에 올라오는 것들을 삭제 등이 가능하다. 
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2028.png)
+![Untitled](Django/Untitled%2028.png)
 
 settings.py에 언어및 시간 설정을 바꿀 수 있다. 
 
@@ -835,13 +835,13 @@ settings.py에 언어및 시간 설정을 바꿀 수 있다.
 
 ⇒ 이 진행 과정을 위해서 5.1 사용을 한다. 이외의 것을 사용하면 현재 까지 진행 과정이 에러가 생길 수 있다고 한다. 
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2029.png)
+![Untitled](Django/Untitled%2029.png)
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2030.png)
+![Untitled](Django/Untitled%2030.png)
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2031.png)
+![Untitled](Django/Untitled%2031.png)
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2032.png)
+![Untitled](Django/Untitled%2032.png)
 
 Django 에서 지원해주는 js와 css 파일들이다. 디자인프레임워크를 좀더 쉽게 개발 할 수 있도록 지원해주었다. 
 
@@ -862,7 +862,7 @@ Django 에서 지원해주는 js와 css 파일들이다. 디자인프레임워�
 5. **Materialize CSS:**
     - Materialize CSS는 구글의 Material Design 가이드에 기반한 CSS 프레임워크로, 머터리얼 디자인을 쉽게 구현할 수 있습니다.
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2033.png)
+![Untitled](Django/Untitled%2033.png)
 
 테이블을 이쁘게 만들어준다. 
 
@@ -1922,35 +1922,35 @@ INSTALLED_APPS = [
 (djangoWeb) C:\DjangoProjects\pjs\djangoWeb>django-admin startapp common
 ```
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2034.png)
+![Untitled](Django/Untitled%2034.png)
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2035.png)
+![Untitled](Django/Untitled%2035.png)
 
 로그인 로그아웃 창이다.
 
 로그인 시 회원은 질문 등록 및 댓글 등을 달 수 있다. 
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2036.png)
+![Untitled](Django/Untitled%2036.png)
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2037.png)
+![Untitled](Django/Untitled%2037.png)
 
 common앱에서 이 일을 처리 할 수 있도록 하고, pybo앱과 함께 연동 처리 되어있다.
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2038.png)
+![Untitled](Django/Untitled%2038.png)
 
 로그인 후에는 자기가 질문을 등록했을 때 글쓴이를 볼 수 있다. 
 
 ## 4.5 회원가입
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2039.png)
+![Untitled](Django/Untitled%2039.png)
 
 페이지 상단에 이런식으로 회원가입을 누르게 되면 회원 처리가 될 수 있도록 하였다. 
 
 이것은 회원 가입시 데이터를 전달하는 듯 하다.  
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2040.png)
+![Untitled](Django/Untitled%2040.png)
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2041.png)
+![Untitled](Django/Untitled%2041.png)
 
 회원가입 후에 이렇게 잘못 입력했을 때 오류 메세지가 출력이 된다. 
 
@@ -1960,13 +1960,13 @@ common앱에서 이 일을 처리 할 수 있도록 하고, pybo앱과 함께 �
 
 ## 4.6 Main Home 링크 연결
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2042.png)
+![Untitled](Django/Untitled%2042.png)
 
 두가지 기능이 있다. GIBEON Softworks를 누를시 해당 질문 등록 창으로 넘어오게 된다. 
 
 그러나 Home 버튼을 누를 시 노션 페이지가 열리도록 하였다. 
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2043.png)
+![Untitled](Django/Untitled%2043.png)
 
 pybo/views/base_views.py 
 
@@ -1983,7 +1983,7 @@ def redirect_to_external_link(request):
 
 ## 5.1 프로젝트 결과 정리
 
-![Untitled](Django%20%E1%84%89%E1%85%A6%E1%84%86%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20b0aea35ad52c42c3979cf61fa4a4f3f5/Untitled%2044.png)
+![Untitled](Django/Untitled%2044.png)
 
 ```html
 
