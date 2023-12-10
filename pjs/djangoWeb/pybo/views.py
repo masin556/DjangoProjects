@@ -1,12 +1,20 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.utils import timezone
+#from django.http import HttpResponseNotAllowed
+from django.core.paginator import Paginator  
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import Question
-
+from .forms import QuestionForm, AnswerForm
 
 #pybo\question_list.html
 def index(request):
+    page = request.GET.get('page', '1')  # 페이지
     # ('-create_date') 역순으로 정렬 | order_by는 조회 결과를 정렬하는 함수
     question_list = Question.objects.order_by('-create_date') 
-    context = {'question_list': question_list}
+    paginator = Paginator(question_list, 10)  # 페이지당 10개씩 보여주기
+    page_obj = paginator.get_page(page)
+    context = {'question_list': page_obj}
     # 파이썬 데이터를 템플릿에 적용하여 HTML로 반환하는 함수
     return render(request, 'pybo/question_list.html', context)
 
@@ -17,4 +25,103 @@ def detail(request, question_id):
     context = {'question': question}
     return render(request, 'pybo/question_detail.html', context)
 
+@login_required(login_url='common:login')
+#question_id는 URL 매핑에 의해 그 값이 전달
+def answer_create(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    #answer = Answer(question=question, content=request.POST.get('content'), create_date=timezone.now())
+    if request.method == "POST":
+        form = AnswerForm(request.POST)
+        if form.is_valid():
+            answer = form.save(commit=False)
+            answer.author = request.user  # author 속성에 로그인 계정 저장
+            answer.create_date = timezone.now()
+            answer.question = question
+            answer.save()
+            return redirect('pybo:detail', question_id=question.id)
+    else:
+        form = AnswerForm()
+    context = {'question': question, 'form': form}
+    return render(request, 'pybo/question_detail.html', context)
 
+
+@login_required(login_url='common:login')
+def question_create(request):
+    if request.method == 'POST':
+        form = QuestionForm(request.POST)
+        if form.is_valid():  # 폼이 유효하다면
+            question = form.save(commit=False)  # 임시 저장하여 question 객체를 리턴받는다.
+            question.author = request.user  # author 속성에 로그인 계정 저장
+            question.create_date = timezone.now()  # 실제 저장을 위해 작성일시를 설정한다.
+            question.save()  # 데이터를 실제로 저장한다.
+            return redirect('pybo:index')
+    else:
+        form = QuestionForm()
+    context = {'form': form}
+    return render(request, 'pybo/question_form.html', context)
+
+
+# 질문 수정
+# Edit question
+@login_required(login_url='common:login')  # 로그인이 필요한 상태에서만 접근 가능
+def question_modify(request, question_id):
+    # 주어진 question_id에 해당하는 Question 객체를 가져오거나 404 에러를 발생시킴
+    question = get_object_or_404(Question, pk=question_id)
+    
+    # 현재 사용자가 해당 질문의 저자가 아니면 권한이 없다는 에러 메시지를 띄우고 상세 페이지로 리다이렉트
+    if request.user != question.author:
+        messages.error(request, 'You do not have permission to edit')
+        return redirect('pybo:detail', question_id=question.id)
+    
+    # HTTP 요청이 POST 방식인 경우
+    if request.method == "POST":
+        # POST 데이터와 현재 question 객체를 사용하여 QuestionForm을 초기화
+        form = QuestionForm(request.POST, instance=question)
+        
+        # 폼이 유효한 경우
+        if form.is_valid():
+            # 수정된 내용을 저장하되 데이터베이스에는 반영하지 않음(commit=False)
+            question = form.save(commit=False)
+            
+            # 수정일자를 현재 시간으로 갱신
+            question.modify_date = timezone.now()
+            
+            # 수정된 내용을 데이터베이스에 저장
+            question.save()
+            
+            # 수정된 질문의 상세 페이지로 리다이렉트
+            return redirect('pybo:detail', question_id=question.id)
+    
+    # HTTP 요청이 POST 방식이 아닌 경우 (첫 진입 시)
+    else:
+        # 현재 question 객체를 사용하여 QuestionForm을 초기화
+        form = QuestionForm(instance=question)
+    
+    # 폼 객체를 context에 담아 템플릿으로 전달
+    context = {'form': form}
+    
+    # 질문 수정 폼 템플릿을 렌더링
+    return render(request, 'pybo/question_form.html', context)
+
+
+# 삭제 버튼 정의
+@login_required(login_url='common:login')
+def question_delete(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    if request.user != question.author:
+        messages.error(request, '삭제권한이 없습니다')
+        return redirect('pybo:detail', question_id=question.id)
+    question.delete()
+    return redirect('pybo:index')
+
+
+
+# home 링크
+def redirect_to_external_link(request):
+    external_link = "https://gibeonsoftworks.notion.site/GIBEON-GAME-STUDIO-Customer-c412c9b24b7d4f2183396cdd3572e054?pvs=4"
+    return redirect(external_link)
+
+# Gmae 링크
+def game_home(request):
+    # game_home 뷰 함수의 내용 추가
+    return render(request, 'pybo/game_home.html')  # 예시로 'pybo/game_home.html'을 렌더링하도록 함

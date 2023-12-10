@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import home
+from . import views
 
 urlpatterns = [
-    path('', home, name='home'),
-    # 다른 URL 패턴들도 필요하다면 추가
+    # 다른 패턴들...
+    #path('home/', views.redirect_to_external_link, name='pybo_external_home'),
+    # 다른 패턴들...
 ]
