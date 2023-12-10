@@ -386,7 +386,7 @@ activateDj 하게 되면 이런식으로 해당 경로로 activate되는 것을 
 ![DjangoWeb.png](Django/DjangoWeb.png)
 
 ### 전체 트리 구조
-
+<div>
 **C:.
 │  db.sqlite3
 │  [manage.py](http://manage.py/)
@@ -670,6 +670,7 @@ activateDj 하게 되면 이런식으로 해당 경로로 activate되는 것을 
 └─common
 login.html
 signup.html**
+</div>
 
 ## 3.2 프로젝트 구현
 
