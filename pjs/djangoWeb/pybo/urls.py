@@ -5,6 +5,7 @@ from .views import base_views, question_views, answer_views
 #from . import views
 
 
+
 #url 별칭 사용시 중복방지
 app_name = 'pybo'
 
@@ -30,10 +31,8 @@ urlpatterns = [
 
     # picture 앱의 URL을 포함합니다.
     path('picture/', include('picture.urls')),
-
     # profile 앱의 URL을 포함합니다.
     path('profiles/', include('profiles.urls')),
-
 
     # 기본 뷰 함수들의 URL 패턴
     # base_views.py

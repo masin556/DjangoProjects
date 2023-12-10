@@ -3,7 +3,6 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 #from django.http import HttpResponseNotAllowed
-
 from ..models import Question, Answer
 
 #pybo\question_list.html
@@ -47,4 +46,5 @@ def game_home(request):
 #Profile
 @login_required(login_url='common:login')
 def profile(request):
-    return render(request, 'pybo/templates/pybo/profile.html')
+    return render(request, 'pybo/profile.html')
+

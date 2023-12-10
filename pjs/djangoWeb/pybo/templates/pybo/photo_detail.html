@@ -1,0 +1,25 @@
+<!-- pybo/templates/pybo/photo_detail.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>{{ photo.description }}</h2>
+
+  <img src="{{ photo.image.url }}" alt="{{ photo.description }}">
+  <p>Likes: {{ photo.likes }}</p>
+
+  <!-- Comments -->
+  {% for comment in comments %}
+    <p>{{ comment.text }}</p>
+  {% endfor %}
+
+  <!-- Like button -->
+  <a href="{% url 'pybo:like_photo' pk=photo.pk %}">Like</a>
+
+  <!-- Comment form -->
+  <form method="post" action="{% url 'pybo:photo_detail' pk=photo.pk %}">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <button type="submit">Comment</button>
+  </form>
+{% endblock %}
