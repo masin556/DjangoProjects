@@ -13,3 +13,26 @@ input[type=submit] {
     height: auto;
 }
 
+#slider {
+    margin: auto;
+    overflow:hidden;
+    position:relative;
+    border:20px solid red;
+    width:1440px;  
+    height:200px;
+ }
+ .image-box {
+    width:5280px; 
+    height:100%;
+    display:flex;
+    flex-wrap:nowrap;
+    animation: bannermove 5s linear infinite;
+ }
+ @keyframes bannermove {
+   0% {
+       transform: translate(0, 0);
+   }
+   100% {
+       transform: translate(-50%, 0);
+   }
+ }
